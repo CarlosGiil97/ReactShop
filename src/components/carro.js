@@ -126,7 +126,7 @@ const  Carrito = (props) =>  {
                                         <button type="button" className="btn btn-info btn-block btn-lg">
                                         <div className="d-flex justify-content-between">
                                         <span></span>
-                                        <span onClick = {buyFunct}>Pagar <i className="fas fa-long-arrow-alt-right ms-2"></i></span>
+                                        <span>Pagar <i className="fas fa-long-arrow-alt-right ms-2"></i></span>
                                         </div>
                                         </button>
 
