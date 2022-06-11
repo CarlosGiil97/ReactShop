@@ -26,7 +26,7 @@ const  Carrito = (props) =>  {
      {elementosCarrito.map((item) => (
           subtotal+= item['precio']
      ))}
-     total = subtotal+20;
+     if(subtotal != 0){total = subtotal+20;}else{ total = 0}     
 
 
      return (
@@ -110,7 +110,7 @@ const  Carrito = (props) =>  {
 
                                         <div className="d-flex justify-content-between">
                                         <p className="mb-2">Subtotal</p>
-                                        <p className="mb-2">{subtotal}</p>
+                                        <p className="mb-2">{subtotal != 0 ? subtotal : '-'} €</p>
                                         </div>
 
                                         <div className="d-flex justify-content-between">
@@ -120,13 +120,13 @@ const  Carrito = (props) =>  {
 
                                         <div className="d-flex justify-content-between mb-4">
                                         <p className="mb-2">Total</p>
-                                        <p className="mb-2">{total} €</p>
+                                        <p className="mb-2">{total != 0 ? Math.round(total,2) : '-'} €</p>
                                         </div>
 
                                         <button type="button" className="btn btn-info btn-block btn-lg">
                                         <div className="d-flex justify-content-between">
                                         <span></span>
-                                        <span>Pagar <i className="fas fa-long-arrow-alt-right ms-2"></i></span>
+                                        <span onClick = {buyFunct}>Pagar <i className="fas fa-long-arrow-alt-right ms-2"></i></span>
                                         </div>
                                         </button>
 

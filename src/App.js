@@ -13,7 +13,7 @@ import Loading from "./components/loading";
 
 const App = () => {
     const [estado,setEstado] = useState([]);
-    var flag = false;
+    
     useEffect(() => {
       return onValue(ref(db, '/productos'), querySnapShot => {
         let data = querySnapShot.val() || {};
@@ -23,6 +23,7 @@ const App = () => {
       });
       
     },[]);
+    
 
 
     const renderHtml = () => {
