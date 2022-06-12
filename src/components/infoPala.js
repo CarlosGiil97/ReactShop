@@ -42,9 +42,9 @@ const InfoPala = (props) =>{
                     
                   </blockquote>
                  
-                     <li className="list-group-item border-0"><h6><b>Marca:</b>{info.marca}</h6></li>
-                     <li className="list-group-item border-0"><h6><b>Stock:</b>{info.stock}</h6></li>
-                     <li className="list-group-item border-0"><h6><b>Percio:</b>{info.precio} €</h6></li>
+                     <li className="list-group-item border-0"><h6><b>Marca: </b>{info.marca}</h6></li>
+                     <li className="list-group-item border-0"><h6><b>Stock: </b>{info.stock}</h6></li>
+                     <li className="list-group-item border-0"><h6><b>Precio: </b>{info.precio} €</h6></li>
                      <div class="container-fluid">
                   <div class="row">
                      <div class="col-md-6">

@@ -10,6 +10,7 @@ import Carrito from './components/carro.js';
 import CarritoProvider from "./carrito/carritoProvider";
 import NavBar from "./components/navBar";
 import Loading from "./components/loading";
+import Footer from "./components/footer.js"
 
 const App = () => {
     const [estado,setEstado] = useState([]);
@@ -18,6 +19,7 @@ const App = () => {
       return onValue(ref(db, '/productos'), querySnapShot => {
         let data = querySnapShot.val() || {};
         let todoItems = {...data};
+        console.log(todoItems)
         setEstado(todoItems);
         
       });
@@ -36,10 +38,8 @@ const App = () => {
                             <Route path="/" element={<Home info={estado} />} /> 
                             <Route path="/pala/:param1" element={<InfoPala info={estado} />} /> 
                             <Route path="/checkout"  element={<Carrito  />} /> 
-                           
-                        
                         </Routes>
-                        {/* <Footer/> */}
+                        <Footer/>
                     </div>
                 </Router>
             </CarritoProvider>
@@ -48,7 +48,8 @@ const App = () => {
 
         return (
             <>
-                {Object.keys(estado).length === 0 ? <Loading />  : renderHtml()}
+                {Object.keys(estado).length === 0 ? <Loading />  : renderHtml()} 
+                {/* //condicional ternario */}
             </>
         );
     
