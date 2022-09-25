@@ -7,7 +7,6 @@ const ProductoUnicoCarrito = (info) => {
     const [carrito, dispatch] = useContext(CarritoContext);
     useEffect(() => {
         localStorage.setItem('productos', JSON.stringify(carrito));
-        console.log('he actualizado el lcoal')
         
       }, [carrito]);
       

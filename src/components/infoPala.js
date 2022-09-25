@@ -10,7 +10,6 @@ const InfoPala = (props) =>{
    //desestructuro lo que me viene del contexto
 
    useEffect(() => {
-      console.log(carrito)
    }, [carrito]);
 
    const url = useLocation();
@@ -56,7 +55,7 @@ const InfoPala = (props) =>{
                      <div class="col-md-6">
                         
                         <button type="button" onClick={() => {dispatch({type: types.anadirProductoCarrito, payload: info})}} class="btn btn-success btn-block">
-                           Añadir al carrito <i class="fa-solid fa-cart-shopping"></i>
+                           Añadir  <i class="fa-solid fa-cart-shopping"></i>
                         </button>
                      </div>
                   </div>

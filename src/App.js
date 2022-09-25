@@ -19,7 +19,6 @@ const App = () => {
       return onValue(ref(db, '/productos'), querySnapShot => {
         let data = querySnapShot.val() || {};
         let todoItems = {...data};
-        console.log(todoItems)
         setEstado(todoItems);
         
       });

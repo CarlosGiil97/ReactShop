@@ -7,7 +7,6 @@ import ProductoUnicoCarrito from './productoUnicoCarrito.js';
 const  Carrito = (props) =>  {
      const [carrito, dispatch] = useContext(CarritoContext);
      //desestructuro lo que me viene del contexto
-     //
      console.log(carrito)
      useEffect(() => {
         

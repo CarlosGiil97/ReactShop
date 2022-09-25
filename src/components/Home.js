@@ -9,11 +9,10 @@ import { CarritoContext } from '../carrito/carritoProvider.js';
 const Home = (props) => {
   const [carrito, dispatch] = useContext(CarritoContext);
   //desestructuro lo que me viene del contexto
-  console.log(carrito)
+
   var estado = props.info;
   
   useEffect(() => {
-    
     localStorage.setItem('productos', JSON.stringify(carrito));
 
   }, [carrito]);

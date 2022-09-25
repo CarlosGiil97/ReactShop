@@ -23,7 +23,7 @@ const ListadoProductos = (props) => {
                 <ul className="list-unstyled mt-3 mb-4">
                     <li><b>Marca:</b>{props.marca}</li>
                 </ul>
-                <button type="button" onClick={() => {dispatch({type: types.anadirProductoCarrito, payload: props})}} className="w-50 btn btn-lg btn-outline-primary">Añadir al carrito</button>
+                <button type="button" onClick={() => {dispatch({type: types.anadirProductoCarrito, payload: props})}} className="w-50 btn btn-lg btn-outline-primary">Añadir<i class="fa-solid fa-cart-shopping"></i></button>
                 <a href={`/pala/${props.id}`} className="w-50 btn btn-lg btn-outline-secondary" >Ver <i className="fa-solid fa-eye"></i></a>
             </div>
             </div>
